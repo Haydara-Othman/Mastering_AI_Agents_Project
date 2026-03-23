@@ -1,0 +1,15 @@
+python-dotenv
+PyPDF2
+chromadb
+langchain-text-splitters
+torch
+langchain-huggingface
+sentence-transformers
+langchain-groq
+langchain-google-genai
+langchain-openai
+langchain-tavily
+langchain-core
+langgraph
+pydantic
+typing-extensions
