@@ -14,6 +14,7 @@ Ensure you follow these rules when finding your response:
 -Your output must be in the structured format you are given
 -Your list of subtasks will be given to web searchers to get information, so keep its words as simple as possible.
 -Make sure that the subtopics are formulated nicely for web search, just like a human would search on the web about that topic .
+-Split the main topic into subtopic suitable for an academic scientific research, covering the history, usages, intuition, and detailed science behind the topic.
 -Make sure that your to-search subtopic is clear and that it can't have two different meanings, if it has, then include an explanation for it or a hint of which meaning is the desired one .
 
 Make sure to follow these tips:
