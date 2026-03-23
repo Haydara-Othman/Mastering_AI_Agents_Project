@@ -52,13 +52,4 @@ python src/main.py
 
 Then enter a topic when prompted. The program will print the final summary after the workflow completes.
 
-## Environment variables (summary)
-
-- `TAVILY_API_KEY` (required): web search
-- LLM provider (choose one; the code checks in order: OpenAI -> Google -> Groq):
-  - `OPENAI_API_KEY` (optional `OPENAI_MODEL`)
-  - `GOOGLE_API_KEY` (optional `GOOGLE_MODEL`)
-  - `GROQ_API_KEY` (optional `GROQ_MODEL`)
-- `EMBEDDING_MODEL`: HuggingFace embedding model
-- `CHROMA_COLLECTION_NAME`: ChromaDB collection name (stored under `./chroma_db`)
 
