@@ -1,5 +1,6 @@
 from dotenv import load_dotenv                                          #type:ignore
 from build_graph import build_graph
+import asyncio
 
    
 
@@ -13,8 +14,10 @@ agent = build_graph()
 
 while True:
     print("-"*50)
-    t=input("Enter the topic you want a research about? ")
+    t=input("Enter the topic you want a research about? (Type 'quit' to exit)")
     print("-"*50)
+    if t.lower() =='quit':
+        break
 
     init_state = {
         'main_topic' : t,
@@ -34,9 +37,7 @@ while True:
 
     }
 
-    print("[main] invoking agent graph")
-    result = agent.invoke(init_state)
-    print("[main] agent run finished")
+    result = asyncio.run(agent.ainvoke(init_state))
 
     print(result["final_summary"])
 

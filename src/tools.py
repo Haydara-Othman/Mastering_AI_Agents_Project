@@ -1,7 +1,21 @@
 import PyPDF2                       #type:ignore
 import os
+from dotenv import load_dotenv      #type:ignore
+from langchain_tavily import TavilySearch                               #type:ignore
 
 
+load_dotenv()
+
+def get_tavily_tool():
+    tavily_api = os.getenv("TAVILY_API_KEY", None)
+
+    if not tavily_api is None:
+        tavily_tool=TavilySearch(tavily_api_key=tavily_api ,max_results=6 , search_depth="advanced")
+        return tavily_tool
+    else :
+        raise ValueError(
+                    "No valid Tavily API key found. Please set one in your .env file then try again"
+                )
 
 def read_txt_file(path):
     with open(path , 'r') as f:
